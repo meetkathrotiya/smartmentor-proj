@@ -1,0 +1,875 @@
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/GothamBook.ttf);
+}
+
+@font-face {
+    font-family: CorporativeSansreg;
+    src: url(../fonts/CorporativeSansRdAlt\ W00\ Rg.ttf);
+}
+
+@font-face {
+    font-family: CorporativeSansbold;
+    src: url(../fonts/CorporativeSansRdAlt\ W00\ Bold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: GothamBook;
+    font-weight: 600;
+    background-color: #f6f8fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 1540px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+:root {
+    --grey-text: #333333;
+    --blue-text: #0090f1;
+    --dark-blue-text: #274d84;
+    --bg-light-grey: #f6f8fa;
+    --bg-light-blue: #dfecf7;
+}
+
+/* header css start */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+.logo img {
+    width: 295px;
+}
+
+.main_menu {
+    display: flex;
+    align-items: center;
+}
+
+.main_menu li {
+    padding: 0 21px;
+}
+
+.main_menu li > a {
+    font-size: 18px;
+    color: var(--grey-text);
+    transition: all 0.3s;
+}
+
+.main_menu li > a.call_text {
+    color: var(--dark-blue-text);
+}
+
+.main_menu li > a:hover {
+    color: var(--blue-text);
+}
+
+.main_menu li > a.active {
+    color: var(--blue-text);
+}
+
+.call_text {
+    color: var(--grey-text);
+    display: flex;
+    align-items: center;
+}
+
+.call_text img {
+    width: 36px;
+    margin-right: 8px;
+}
+
+.main_menu a.register-btn, .main_menu a.signin-btn {
+    font-size: 17px;
+    background-color: var(--blue-text);
+    padding: 14.12px 18.6px;
+    border-radius: 100px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.main_menu a.register-btn:hover {
+    background-color: var(--dark-blue-text);
+}
+
+.main_menu a.signin-btn:hover {
+    background-color: #0090f1;
+}
+
+.main_menu a.signin-btn {
+    margin-left: 11px;
+    background-color: var(--dark-blue-text);
+}
+
+.hamburger , .hamburger.close {
+    display: none;
+} 
+
+@media (max-width: 1399px){
+    .logo img {
+        width: 200px;
+    }
+    .main_menu li {
+        padding: 0 14px;
+    }
+    .main_menu li > a {
+        font-size: 16px;
+    }
+    .call_text img {
+        width: 28px;
+    }
+    .main_menu a.register-btn, .main_menu a.signin-btn {
+        font-size: 16px;
+        padding: 13.12px 16.6px;
+    }
+}
+
+@media (max-width: 1199px){
+    .main_menu {
+        transform: translateX(100%);
+        padding: 70px 20px 20px 20px;
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: #dfecf7;
+        top: 0px;
+        position: fixed;
+        right: 0;
+        z-index: 99999;
+        transition: all 0.3s;
+        opacity: 0;
+        overflow-y: auto;
+    }
+    .main_menu.mobile_menu {
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .main_menu li {
+        padding: 10px 0px;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.close {
+        display: block;
+        position: absolute;
+        top: 20px;
+    }
+    .main_menu a.register-btn, .main_menu a.signin-btn {
+        margin-top: 6px;
+        display: block;
+        width: 100%;
+        max-width: 150px;
+    }
+    .main_menu a.signin-btn {
+        margin-left: 0px;
+    }
+}
+
+/* header css end */
+
+/* cash offers section start */
+
+.cash-offer-section {
+    width: 100%;
+    padding: 122px 0px;
+    background-color: #f2f5f8;
+}
+
+.c-offer-sec {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 78px 0px 96px 0px;
+}
+
+.section-title h2 {
+    position: relative;
+    font-family: CorporativeSansreg;
+    font-size: 46px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--dark-blue-text);
+}
+
+.section-title h2::before {
+    position: absolute;
+    content: '';
+    width: 67px;
+    height: 2px;
+    background-color: var(--blue-text);
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title h2 > span {
+    font-family: CorporativeSansbold;
+    font-weight: 800;
+}
+
+.offer-step-sec:first-child {
+    margin-top: 0px;
+}
+
+.offer-step-sec {
+    margin-top: 53px;
+}
+
+.offer-step-sec > span {
+    color: var(--dark-blue-text);
+    font-size: 21.51px;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.offer-step-sec .step-inner-sec {
+    display: flex;
+    align-items: center;
+}
+
+.offer-step-sec .step-inner-sec > p {
+    font-size: 20px;
+    margin-left: 16px;
+    line-height: 1.3em;
+}
+
+.step-inner-sec > .step-icon {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    background-color: var(--bg-light-blue);
+    border-radius: 50%;
+}
+
+.step-inner-sec .step-icon-selected {
+    background-color: var(--blue-text);
+}
+
+.step-inner-sec > .step-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.co-details-sec p {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.33em;
+}
+
+.co-details-sec .btn-sec {
+    margin-top: 40px;
+    gap: 32px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.co-details-sec .btn-sec .call-btn , .co-details-sec .btn-sec .sell-house-btn {
+    background-color: var(--dark-blue-text);
+    padding: 21.6px 42px;
+    border-radius: 100px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.co-details-sec .btn-sec .sell-house-btn {
+    background-color: var(--blue-text);
+}
+
+.co-details-sec .btn-sec .call-btn:hover {
+    background-color: var(--blue-text);
+}
+
+.co-details-sec .btn-sec .sell-house-btn:hover {
+    background-color: var(--dark-blue-text);
+}
+
+.co-video-sec {
+    position: relative;
+}
+
+.co-video-sec iframe {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 534px;
+    height: 301px;
+    border: none;
+}
+
+@media (max-width: 1199.98px){
+    .cash-offer-section {
+        width: 100%;
+        padding: 80px 0px;
+        background-color: #f2f5f8;
+    }
+    .co-video-sec {
+        position: relative;
+        width: 420px;
+        height: 100%;
+    }
+    .co-video-sec img {
+        width: 100%;
+    }
+ 
+    .co-video-sec iframe {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 388px;
+        height: 218px;
+        border: none;
+    }
+    .section-title h2 {
+        font-size: 37px;
+    }
+    .offer-step-sec > span {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .step-inner-sec > .step-icon {
+        width: 60px;
+        height: 60px;
+        padding: 16px;
+    }
+    .offer-step-sec .step-inner-sec > p {
+        font-size: 18px;
+    }
+    .co-details-sec p {
+        font-size: 20px;
+    }
+    .c-offer-sec {
+        padding: 60px 0px 60px 0px;
+    }
+    .co-details-sec .btn-sec {
+        margin-top: 24px;
+        gap: 20px;
+    }
+    .co-details-sec .btn-sec .call-btn, .co-details-sec .btn-sec .sell-house-btn {
+        padding: 17.6px 38px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .cash-offers-sec {
+        margin-top: 40px;
+    }
+    .c-offer-sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 68px 0px 48px 0px;
+    }
+    .section-title h2 {
+        font-size: 30px;
+    }
+    .cash-offer-section {
+        padding: 60px 0px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .section-title h2 {
+        font-size: 24px;
+    }
+    .c-offer-sec {
+        padding: 50px 0px 48px 0px;
+    }
+    .co-details-sec p {
+        font-size: 16px;
+    }
+    .co-video-sec {
+        width: calc(420px - 120px);
+    }
+    .co-video-sec img {
+        width: 100%;
+    }
+    .co-video-sec iframe {
+        top: 12px;
+        left: 12px;
+        width: calc(100% - 24px);
+        height: 158px;
+    }
+    .offer-step-sec {
+        margin-top: 32px;
+    }
+    .co-details-sec .btn-sec .call-btn, .co-details-sec .btn-sec .sell-house-btn {
+        padding: 14px 32px;
+    }
+    .co-details-sec .btn-sec {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480.98px){
+    .offer-step-sec .step-inner-sec > p {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+/* cash offers section end */
+
+/* No Matter The Situation, Cash Offrs Will Get Your Property Sold! section start */
+
+.nmts-sec {
+    padding: 135px 0px;
+    background-color: #fff;
+}
+
+.nmts-sec .nmts-inner-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.nmts-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 66px;
+    font-size: 24px;
+}
+
+.nmts-box:last-child {
+    margin-bottom: 0px;
+}
+
+.nmts-box .nmts-box-icon.selected {
+    background-color: var(--dark-blue-text);
+}
+
+.nmts-box .nmts-box-icon {
+    width: 110px;
+    height: 110px;
+    background-color: #dfecf7;
+    border-radius: 50%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(4.95px 4.95px 15px rgba(0,0,0,0.14));
+    background-color: #ffffff;
+}
+
+.nmts-box .nmts-box-icon img {
+    width: 100%;
+}
+
+.nmts-middle-sec {
+    width: 460px;
+    height: 460px;
+    background: #f2f5f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nmts-left-sec .nmts-box-icon {
+    margin-left: 22px;
+}
+
+.nmts-left-sec .nmts-box {
+    justify-content: right;
+}
+
+.nmts-right-sec .nmts-box {
+    justify-content: left;
+}
+
+.nmts-right-sec .nmts-box-icon {
+    margin-right: 22px;
+}
+
+.nmts-left-sec .nmts-box:nth-child(2) {
+    position: relative;
+    left: -53px;
+}
+
+.nmts-right-sec .nmts-box:nth-child(2) {
+    position: relative;
+    left: 53px;
+}
+
+.learn-more-btn {
+    display: block;
+    padding: 18px 38px;
+    background-color: var(--blue-text);
+    margin: 54px auto 0px;
+    width: fit-content;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 50px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--dark-blue-text);
+}
+
+.nmts-inner-sec .nmts-left-sec , .nmts-inner-sec .nmts-right-sec {
+    position: relative;
+}
+
+.nmts-inner-sec .nmts-left-sec::before {
+    position: absolute;
+    content: '';
+    background-image: url(../image/curv-shape-left.png);
+    width: 54px;
+    height: 100%;
+    top: 60%;
+    left: auto;
+    right: 30px;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+
+.nmts-inner-sec .nmts-right-sec::before {
+    position: absolute;
+    content: '';
+    background-image: url(../image/curv-shape-right.png);
+    width: 54px;
+    height: 100%;
+    top: 60%;
+    left: 85px;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+
+@media (max-width: 1299.98px){
+    .nmts-box .nmts-box-icon {
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+    }
+    .nmts-box {
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+    .nmts-inner-sec .nmts-left-sec::before {
+        top: 50%;
+        right: 43px;
+        width: 22px;
+    }
+    .nmts-inner-sec .nmts-right-sec::before {
+        width: 56px;
+        top: 50%;
+        left: 45px;
+    }
+    .nmts-left-sec .nmts-box:nth-child(2) {
+        left: -36px;
+    }
+    .nmts-right-sec .nmts-box:nth-child(2) {
+        left: 36px;
+    }
+    .nmts-middle-sec {
+        width: 360px;
+        height: 360px;
+        overflow: hidden;
+    }
+    .nmts-middle-sec img {
+        width: 100%;
+    }
+    .learn-more-btn {
+        padding: 14px 32px;
+        margin: 50px auto 0px;
+        font-size: 18px;
+    }
+    .nmts-sec {
+        padding: 90px 0px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .nmts-sec .nmts-inner-sec {
+        margin-top: 60px;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .nmts-sec .nmts-inner-sec .nmts-left-sec {
+        order: 2;
+        width: 100%;
+        left: -50%;
+    }
+    .nmts-sec .nmts-inner-sec .nmts-middle-sec {
+        order: 1;
+    }
+    .nmts-sec .nmts-inner-sec .nmts-right-sec {
+        order: 3;
+        width: 100%;
+        left: 50%;
+    }
+    .nmts-inner-sec .nmts-right-sec::before {
+        width: 54px;
+        top: 50.20%;
+        left: 48px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .nmts-sec {
+        padding: 60px 0px;
+    }
+    .nmts-box {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    .nmts-box .nmts-box-icon {
+        width: 65px;
+        height: 65px;
+        padding: 15px;
+        margin-left: 12px;
+    }
+    .nmts-inner-sec .nmts-left-sec::before , 
+    .nmts-inner-sec .nmts-right-sec::before {
+        display: none;
+    }
+    .nmts-left-sec .nmts-box:nth-child(2) , .nmts-right-sec .nmts-box:nth-child(2) {
+        left: 0px;
+    }
+    .learn-more-btn {
+        padding: 12px 30px;
+        margin: 40px auto 0px;
+        font-size: 16px;
+    }
+    .nmts-middle-sec {
+        width: 280px;
+        height: 280px;
+    }
+    .nmts-box .nmts-box-icon {
+        margin-left: 0px;
+        margin-right: 12px;
+    }
+    .nmts-sec .nmts-inner-sec .nmts-left-sec , .nmts-sec .nmts-inner-sec .nmts-right-sec {
+        left: 0%;
+    }
+    .nmts-left-sec .nmts-box {
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    .nmts-right-sec .nmts-box {
+        justify-content: center;
+    }
+    .nmts-sec .nmts-inner-sec {
+        row-gap: 15px;
+    }
+}
+
+/* No Matter The Situation, Cash Offrs Will Get Your Property Sold! section end */
+
+/* happy client review section start */
+
+.happy-client-sec {
+    padding: 84px 0px;
+}
+
+.review-main-sec {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    padding-left: 390px;
+}
+
+.review-left-sec {
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 112px;
+    z-index: 111;
+    transform: translate(0%, -50%);
+}
+
+.review-left-sec , .review-right-sec {
+    padding-bottom: 80px!important;
+}
+
+body .swiper-slide {
+    height: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.swiper-container {
+    margin-top: 50px;
+    position: relative;
+}
+
+.review-left-sec h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--dark-blue-text);
+    margin-bottom: 7px;
+}
+
+.review-numb {
+    font-size: 22px;
+    color: #ee732a;
+}
+
+.review-comp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    color: var(--grey-text);
+}
+
+.ready-review-btn {
+    display: block;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: var(--blue-text);
+    padding: 12px 17px;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.ready-review-btn:hover {
+    background-color: var(--dark-blue-text);
+}
+
+.first-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-sec {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rating-sec img {
+    margin-left: 8px;
+}
+
+.slide-paragph {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    color:var(--grey-text);
+    font-weight: 400;
+    font-family: "Poppins";
+    height: 230px;
+    overflow-y: auto;
+    padding-right: 12px;
+}
+
+.swiper-slide h4 {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.swiper-slide span {
+    font-size: 18px;
+    color: #666666;
+    margin-top: 7px;
+    display: block;
+}
+
+@media (max-width: 1199px){
+    .review-main-sec {
+        padding-left: 300px;
+    }
+    .review-main-sec {
+        padding-left: 300px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .happy-client-sec {
+        padding: 60px 0px;
+    }
+    .slide-paragph {
+        height: auto;
+    }
+    .review-left-sec {
+        left: 10px;
+    }
+    .review-main-sec {
+        padding-left: 200px;
+    }
+    .review-left-sec h3 {
+        font-size: 22px;
+    }
+    .review-numb {
+        font-size: 18px;
+    }
+    .review-numb  svg {
+        width: 14px;
+    }
+    .ready-review-btn {
+        font-size: 13px;
+    }
+    .review-right-sec {
+        padding-bottom: 40px!important;
+    }
+}
+
+@media (max-width: 767.98px){
+    .review-left-sec {
+        width: 100%;
+        max-width: max-content;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 0px;
+    }
+    .review-main-sec {
+        padding-top: 150px;
+        padding-left: 0;
+        width: 100%;
+        max-width: 360px;
+        margin: 70px auto 0px;
+    }
+    .swiper-slide h4 {
+        font-size: 18px;
+    }
+    .swiper-slide span {
+        font-size: 16px;
+    }
+}
+
+/* happy client review section end */
